@@ -1,12 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P. Poribahan</title>
+    <!-- tailwind and daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        .font-raleway {
+            font-family: "Raleway", sans-serif;
+        }
+        .font-inter{
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+
 </head>
+
 <body>
-    
-    
+    <header class="container mx-auto">
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 ">
+                            <li><a class="text-good-color">Home</a></li>
+                            <li><a class="text-text-me-ul-color">About</a></li>
+                            <li><a class="text-text-me-ul-color">Destination</a></li>
+                            <li><a class="text-text-me-ul-color">search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-2xl lg:text-4xl font-extrabold text-h-color">P- Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-base">
+                        <li><a class="text-good-color">Home</a></li>
+                        <li><a class="text-text-me-ul-color">About</a></li>
+                        <li><a class="text-text-me-ul-color">Destination</a></li>
+                        <li><a class="text-text-me-ul-color">search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end space-x-4">
+                    <a class="btn bg-[#1DD1001A] text-[#1DD100] lg:font-bold border-[#1DD10066]">Bus <img
+                            src="images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+        <!-- banner -->
+        <section class="relative mt-9 p-1 space-y-2">
+            <div class="w-full h-[80vh] bg-center bg-no-repeat bg-cover bg-[url(images/banner.png)] font-raleway rounded-lg lg:rounded-[32px]">
+               <div class="min-h-full flex flex-col items-center justify-center gap-2 lg:gap-6">
+                <h1 class="text-4xl lg:text-6xl text-white font-extrabold text-center">End-to-End Travel with</h1>
+                <h1 class="text-4xl lg:text-6xl text-[#1DD100] font-extrabold text-center">EP Paribahan</h1>
+                <p class="max-w-2xl font-inter text-[18px] text-center  text-yellow-50">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+                <div><button id="buy-tickets" class="btn bg-[#1DD100] border-none">Buy Tickets</button></div>
+               </div>
+            </div>
+            <div class="lg:w-[80%] flex flex-col lg:flex-row justify-center gap-6 lg:absolute -bottom-14 right-[8rem] font-inter">
+                <div class="card card-side bg-base-100 shadow-xl border-b-4 border-[#1DD100]">
+                    <figure><img src="images/people.png" alt="Movie"/></figure>
+                    <div class="card-body">
+                      <h2 class="card-title font-bold text-3xl">500K+</h2>
+                      <p class="text-gray-400">Registered users</p>
+                      <div class="card-actions justify-end">
+                      </div>
+                    </div>
+                  </div>
+                <div class="card card-side bg-base-100 shadow-xl border-b-4 border-[#1DD100]">
+                    <figure><img src="images/ticket-cupon.png" alt="Movie"/></figure>
+                    <div class="card-body">
+                      <h2 class="card-title font-bold text-3xl">1.7 lacks</h2>
+                      <p class="text-gray-400">Tickets sold</p>
+                      <div class="card-actions justify-end">
+                      </div>
+                    </div>
+                  </div>
+                <div class="card card-side bg-base-100 shadow-xl border-b-4 border-[#1DD100]">
+                    <figure><img src="images/stoppage.png" alt="Movie"/></figure>
+                    <div class="card-body">
+                      <h2 class="card-title font-bold text-3xl">80K+</h2>
+                      <p class="text-gray-400">Rental partners</p>
+                      <div class="card-actions justify-end">
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
+        </section>
+    </header>
+
+    <body>
+
+    </body>
+    <footer>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
