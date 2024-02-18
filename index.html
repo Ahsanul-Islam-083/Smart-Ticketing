@@ -23,6 +23,13 @@
         .font-inter {
             font-family: "Inter", sans-serif;
         }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            color: #03071299;
+            padding: 8px;
+        }
     </style>
 
 </head>
@@ -171,8 +178,8 @@
                     <p class="font-inter lg:text-[18px] text-center">Yes, you can run unit tests and view the
                         results directly within the app. The integrated testing features allow for a streamlined .</p>
                 </div>
+                <!-- Greenline Paribahan info container -->
                 <div>
-                    <!-- Greenline Paribahan container -->
                     <div class="flex flex-col gap-6 lg:grid grid-cols-4 bg-white p-2 lg:p-8 rounded-3xl mt-12 relative">
                         <div class="col-span-3">
                             <div class="mb-3">
@@ -181,7 +188,8 @@
                                         <figure><img src="images/bus-logo.png" alt="Movie" /></figure>
                                         <div class="card-body">
                                             <h2 class="card-title font-bold lg:text-3xl">Greenline Paribahan</h2>
-                                            <p class="text-gray-400 text-[13px] lg:text-base">Coach-009-WEB ! AC_Business</p>
+                                            <p class="text-gray-400 text-[13px] lg:text-base">Coach-009-WEB !
+                                                AC_Business</p>
                                             <div class="card-actions justify-end">
                                             </div>
                                         </div>
@@ -193,18 +201,26 @@
                                 </div>
                             </div>
                             <div class="bg-[#F7F8F8] rounded-3xl p-2 lg:p-8">
-                                <div class="flex justify-between border-b border-dashed border-[#03071233] p-2 lg:p-6 font-raleway gl:text-[18px] font-semibold">
+                                <div
+                                    class="flex justify-between border-b border-dashed border-[#03071233] p-2 lg:p-6 font-raleway gl:text-[18px] font-semibold">
                                     <p class="text-[#03071299]">Route</p>
                                     <p class="text-black">Dhaka - Sylhet</p>
                                 </div>
-                                <div class="flex justify-between border-b border-dashed border-[#03071233] p-2 lg:p-6 font-raleway gl:text-[18px] font-semibold">
+                                <div
+                                    class="flex justify-between border-b border-dashed border-[#03071233] p-2 lg:p-6 font-raleway gl:text-[18px] font-semibold">
                                     <p class="text-[#03071299]">Departure Time</p>
                                     <p class="text-black">9:00 PM</p>
                                 </div>
                                 <div class="w-full flex flex-col lg:flex-row justify-between items-center mt-6 gap-2">
-                                    <div class="w-full lg:w-[30%] p-4 bg-[#0307120D] text-center rounded-xl font-inter font-medium">Boarding Point - Laxmipur</div>
-                                    <div class="w-full lg:w-[30%] p-4 bg-[#0307120D] text-center rounded-xl font-inter font-medium">Dropping Point - Bogura</div>
-                                    <div class="w-full lg:w-[30%] p-4 bg-[#0307120D] text-center rounded-xl font-inter font-medium">Est. Time - 11 Hour</div>
+                                    <div
+                                        class="w-full lg:w-[30%] p-4 bg-[#0307120D] text-center rounded-xl font-inter font-medium">
+                                        Boarding Point - Laxmipur</div>
+                                    <div
+                                        class="w-full lg:w-[30%] p-4 bg-[#0307120D] text-center rounded-xl font-inter font-medium">
+                                        Dropping Point - Bogura</div>
+                                    <div
+                                        class="w-full lg:w-[30%] p-4 bg-[#0307120D] text-center rounded-xl font-inter font-medium">
+                                        Est. Time - 11 Hour</div>
                                 </div>
                             </div>
                         </div>
@@ -220,6 +236,314 @@
                         </div>
                     </div>
                 </div>
+                <!-- sit booking section -->
+                <div class=" bg-white mt-7 rounded-3xl">
+                    <div class="flex flex-col w-full lg:flex-row divide-x-2 divide-dashed divide-gray-300">
+                        <div class="grid flex-grow p-8">
+                            <h2 class="text-2xl font-raleway font-semibold p-6 border-b border-dashed border-gray-300">
+                                Select Your Seat</h2>
+                            <div class="flex justify-between p-5 border-b border-dashed border-gray-300">
+                                <p class="flex items-center gap-2"><img src="images/seat-gray.png" alt="">Available</p>
+                                <p class="flex items-center gap-2"><img src="images/seat-green-filled.png"
+                                        alt="">Selected</p>
+                            </div>
+                            <!-- seat list -->
+                            <div class="flex items-center gap-4 mt-6">
+                                <div class="">
+                                    <div></div>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="grid grid-cols-4 gap-4">
+                                        <div class=""></div>
+                                        <div class=""></div>
+                                        <div class=""></div>
+                                        <div class=" w-full"><button class="btn lg:w-[80%]"><img src="images/driver.png"
+                                                    alt=""></button></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6">
+                                <div class="">
+                                    A
+                                </div>
+                                <div class="flex-1">
+                                    <div class="grid grid-cols-4 lg:gap-4">
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">A1</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">A2</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">A3</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">A4</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6">
+                                <div class="">
+                                    B
+                                </div>
+                                <div class="flex-1">
+                                    <div class="grid grid-cols-4 lg:gap-4">
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">B1</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">B2</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">B3</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">B4</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6">
+                                <div class="">
+                                    C
+                                </div>
+                                <div class="flex-1">
+                                    <div class="grid grid-cols-4 lg:gap-4">
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">C1</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">C2</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">C3</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">C4</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6">
+                                <div class="">
+                                    D
+                                </div>
+                                <div class="flex-1">
+                                    <div class="grid grid-cols-4 lg:gap-4">
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">D1</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">D2</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">D3</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">D4</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6">
+                                <div class="">
+                                    E
+                                </div>
+                                <div class="flex-1">
+                                    <div class="grid grid-cols-4 lg:gap-4">
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">E1</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">E2</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">E3</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">E4</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6">
+                                <div class="">
+                                    F
+                                </div>
+                                <div class="flex-1">
+                                    <div class="grid grid-cols-4 lg:gap-4">
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">F1</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">F2</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">F3</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">F4</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6">
+                                <div class="">
+                                    G
+                                </div>
+                                <div class="flex-1">
+                                    <div class="grid grid-cols-4 lg:gap-4">
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">G1</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">G2</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">G3</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">G4</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6">
+                                <div class="">
+                                    H
+                                </div>
+                                <div class="flex-1">
+                                    <div class="grid grid-cols-4 lg:gap-4">
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">H1</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">AH</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">H3</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">H4</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6">
+                                <div class="">
+                                    I
+                                </div>
+                                <div class="flex-1">
+                                    <div class="grid grid-cols-4 lg:gap-4">
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A] p-[19px]">I1</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A] p-[19px]">I2</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A] p-[19px]">I3</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A] p-[19px]">I4</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 mt-6">
+                                <div class="">
+                                    J
+                                </div>
+                                <div class="flex-1">
+                                    <div class="grid grid-cols-4 lg:gap-4">
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A] p-[18px]">J1</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A] p-[18px]">JH</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A] p-[18px]">J3</button>
+                                        </div>
+                                        <div class=""><button
+                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A] p-[18px]">J4</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- ticket info -->
+                        <div class="grid flex-grow lg:p-8">
+                            <h2 class="text-2xl font-raleway font-semibold p-6 border-b border-dashed border-gray-300">
+                                Select Your Seat</h2>
+                            <div class=" font-inter bg-[#F7F8F8] p-3 lg:p-8 rounded-xl mt-6">
+                                <ul class="mt-6 space-y-2 font-medium ">
+                                    <li class="text-black border-b border-dashed border-gray-300 p-2">
+                                        <p>Seat <span
+                                                class="bg-[#1DD100] text-white p-1 rounded-md font-bold text-xs ">0</span>
+                                        </p>
+                                        <p>Class</p>
+                                        <p>Price</p>
+                                    </li>
+                                    <li>
+                                        <p>C1</p>
+                                        <p>C1</p>
+                                        <p>C1</p>
+                                    </li>
+                                </ul>
+                                <div class="flex justify-between border-t-2 py-4 font-semibold">
+                                    <p>Total Price</p>
+                                    <p>BDT <span>0</span></p>
+                                </div>
+                                <div id="discount">
+
+                                </div>
+                                <div class="w-full flex join bg-white p-2">
+                                    <input type="text" placeholder="Type here"
+                                        class="input w-[90%] join-item  outline-none" />
+                                    <button
+                                        class="btn bg-[#1DD100] text-white join-item flex-1 font-semibold">Apply</button>
+                                </div>
+                                <div class="flex justify-between py-4 font-semibold">
+                                    <p>Grand Total</p>
+                                    <p>BDT <span>0</span></p>
+                                </div>
+                                <div class=" space-y-2 lg:space-y-5">
+                                    <p class="font-semibold">Passenger Name*</p>
+                                    <label class="input input-bordered flex items-center gap-2">
+                                        <input type="text" class="grow" placeholder="Enter your name" />
+                                    </label>
+                                    <p class="font-semibold">Phone Number*</p>
+                                    <label class="input input-bordered flex items-center gap-2">
+                                        <input type="number" class="grow" placeholder="Enter your phone number" />
+                                    </label>
+                                    <p class="font-semibold">Email ID</p>
+                                    <label class="input input-bordered flex items-center gap-2">
+                                        <input type="text" class="grow" placeholder="Enter your email id" />
+                                    </label>
+                                    <div class="flex">
+                                        <button
+                                            class="btn bg-[#1DD100] text-white text-xl font-raleway font-extrabold flex-1">Next</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -232,3 +556,6 @@
 </body>
 
 </html>
+<!-- <div class=" bg-[#0307121A]">
+    <img class="btn" src="images/driver.png" alt="">
+</div> -->
