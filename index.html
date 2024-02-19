@@ -30,6 +30,13 @@
             color: #03071299;
             padding: 8px;
         }
+        .clicked {
+            background-color: #1DD100;
+            color: white;
+        }
+        .disable{
+            pointer-events: none;
+        }
     </style>
 
 </head>
@@ -81,7 +88,10 @@
                     <p class="max-w-2xl font-inter lg:text-[18px] text-center  text-yellow-50">Yes, you can run unit
                         tests and view the results directly within the app. The integrated testing features allow for a
                         streamlined .</p>
-                    <div><button id="buy-tickets" class="btn bg-[#1DD100] border-none">Buy Tickets</button></div>
+                    <div>
+                        <a href="#tickets" id="scrollBtn" class="btn bg-[#1DD100] border-none">Buy Tickets</a>
+                    </div>
+
                 </div>
             </div>
             <div
@@ -170,7 +180,7 @@
             </div>
         </section>
         <!-- poribohon info and sit booking section -->
-        <section class="bg-[#F7F8F8] rounded-t-3xl lg:rounded-t-[88px] min-h-screen mt-28">
+        <section id="tickets" class="bg-[#F7F8F8] rounded-t-3xl lg:rounded-t-[88px] min-h-screen mt-28">
             <!-- data container -->
             <div class="container mx-auto">
                 <div class="max-w-2xl mx-auto">
@@ -196,7 +206,8 @@
                                     </div>
                                     <div><button
                                             class="btn bg-[#1DD1001A] text-[#1DD100] lg:font-bold border-[#1DD10066]"><img
-                                                src="images/seat-green.png" alt=""><span>40</span>Seats left</button>
+                                                src="images/seat-green.png" alt=""><span id="seat-left">40</span>Seats
+                                            left</button>
                                     </div>
                                 </div>
                             </div>
@@ -248,242 +259,284 @@
                                         alt="">Selected</p>
                             </div>
                             <!-- seat list -->
-                            <div class="flex items-center gap-4 mt-6">
-                                <div class="">
-                                    <div></div>
-                                </div>
-                                <div class="flex-1">
-                                    <div class="grid grid-cols-4 gap-4">
-                                        <div class=""></div>
-                                        <div class=""></div>
-                                        <div class=""></div>
-                                        <div class=" w-full"><button class="btn lg:w-[80%]"><img src="images/driver.png"
-                                                    alt=""></button></div>
+                            <div id="go">
+                                <div class="flex items-center gap-4 mt-6">
+                                    <div class="">
+                                        <div></div>
                                     </div>
+                                    <div class="flex-1">
+                                        <div class="grid grid-cols-4 gap-4">
+                                            <div class=""></div>
+                                            <div class=""></div>
+                                            <div class=""></div>
+                                            <div class=" w-full"><button class="btn lg:w-[80%]"><img
+                                                        src="images/driver.png" alt=""></button></div>
+                                        </div>
 
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4 mt-6">
-                                <div class="">
-                                    A
-                                </div>
-                                <div class="flex-1">
-                                    <div class="grid grid-cols-4 lg:gap-4">
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">A1</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">A2</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">A3</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">A4</button>
-                                        </div>
                                     </div>
-
                                 </div>
-                            </div>
-                            <div class="flex items-center gap-4 mt-6">
-                                <div class="">
-                                    B
-                                </div>
-                                <div class="flex-1">
-                                    <div class="grid grid-cols-4 lg:gap-4">
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">B1</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">B2</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">B3</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">B4</button>
-                                        </div>
+                                <div class="flex items-center gap-4 mt-6">
+                                    <div class="">
+                                        A
                                     </div>
+                                    <div class="flex-1">
+                                        <div class="grid grid-cols-4 lg:gap-4">
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">A1</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">A2</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">A3</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">A4</button>
+                                            </div>
+                                        </div>
 
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4 mt-6">
-                                <div class="">
-                                    C
-                                </div>
-                                <div class="flex-1">
-                                    <div class="grid grid-cols-4 lg:gap-4">
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">C1</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">C2</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">C3</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">C4</button>
-                                        </div>
                                     </div>
-
                                 </div>
-                            </div>
-                            <div class="flex items-center gap-4 mt-6">
-                                <div class="">
-                                    D
-                                </div>
-                                <div class="flex-1">
-                                    <div class="grid grid-cols-4 lg:gap-4">
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">D1</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">D2</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">D3</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">D4</button>
-                                        </div>
+                                <div class="flex items-center gap-4 mt-6">
+                                    <div class="">
+                                        B
                                     </div>
+                                    <div class="flex-1">
+                                        <div class="grid grid-cols-4 lg:gap-4">
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">B1</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">B2</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">B3</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">B4</button>
+                                            </div>
+                                        </div>
 
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4 mt-6">
-                                <div class="">
-                                    E
-                                </div>
-                                <div class="flex-1">
-                                    <div class="grid grid-cols-4 lg:gap-4">
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">E1</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">E2</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">E3</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">E4</button>
-                                        </div>
                                     </div>
-
                                 </div>
-                            </div>
-                            <div class="flex items-center gap-4 mt-6">
-                                <div class="">
-                                    F
-                                </div>
-                                <div class="flex-1">
-                                    <div class="grid grid-cols-4 lg:gap-4">
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">F1</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">F2</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">F3</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">F4</button>
-                                        </div>
+                                <div class="flex items-center gap-4 mt-6">
+                                    <div class="">
+                                        C
                                     </div>
+                                    <div class="flex-1">
+                                        <div class="grid grid-cols-4 lg:gap-4">
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">C1</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">C2</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">C3</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">C4</button>
+                                            </div>
+                                        </div>
 
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4 mt-6">
-                                <div class="">
-                                    G
-                                </div>
-                                <div class="flex-1">
-                                    <div class="grid grid-cols-4 lg:gap-4">
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">G1</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">G2</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">G3</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">G4</button>
-                                        </div>
                                     </div>
-
                                 </div>
-                            </div>
-                            <div class="flex items-center gap-4 mt-6">
-                                <div class="">
-                                    H
-                                </div>
-                                <div class="flex-1">
-                                    <div class="grid grid-cols-4 lg:gap-4">
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">H1</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">AH</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]">H3</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]">H4</button>
-                                        </div>
+                                <div class="flex items-center gap-4 mt-6">
+                                    <div class="">
+                                        D
                                     </div>
+                                    <div class="flex-1">
+                                        <div class="grid grid-cols-4 lg:gap-4">
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">D1</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">D2</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">D3</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">D4</button>
+                                            </div>
+                                        </div>
 
-                                </div>
-                            </div>
-                            <div class="flex items-center gap-4 mt-6">
-                                <div class="">
-                                    I
-                                </div>
-                                <div class="flex-1">
-                                    <div class="grid grid-cols-4 lg:gap-4">
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A] p-[19px]">I1</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A] p-[19px]">I2</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A] p-[19px]">I3</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A] p-[19px]">I4</button>
-                                        </div>
                                     </div>
-
                                 </div>
-                            </div>
-                            <div class="flex items-center gap-4 mt-6">
-                                <div class="">
-                                    J
-                                </div>
-                                <div class="flex-1">
-                                    <div class="grid grid-cols-4 lg:gap-4">
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A] p-[18px]">J1</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A] p-[18px]">JH</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A] p-[18px]">J3</button>
-                                        </div>
-                                        <div class=""><button
-                                                class="btn btn-outline btn-success lg:w-[80%] bg-[#0307121A] p-[18px]">J4</button>
-                                        </div>
+                                <div class="flex items-center gap-4 mt-6">
+                                    <div class="">
+                                        E
                                     </div>
+                                    <div class="flex-1">
+                                        <div class="grid grid-cols-4 lg:gap-4">
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">E1</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">E2</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">E3</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">E4</button>
+                                            </div>
+                                        </div>
 
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="flex items-center gap-4 mt-6">
+                                    <div class="">
+                                        F
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="grid grid-cols-4 lg:gap-4">
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">F1</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">F2</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">F3</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">F4</button>
+                                            </div>
+                                        </div>
 
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 mt-6">
+                                    <div class="">
+                                        G
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="grid grid-cols-4 lg:gap-4">
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">G1</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">G2</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">G3</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">G4</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 mt-6">
+                                    <div class="">
+                                        H
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="grid grid-cols-4 lg:gap-4">
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">H1</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">AH</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A]"
+                                                    data-price="550">H3</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A]"
+                                                    data-price="550">H4</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 mt-6">
+                                    <div class="">
+                                        I
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="grid grid-cols-4 lg:gap-4">
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A] p-[19px]"
+                                                    data-price="550">I1</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A] p-[19px]"
+                                                    data-price="550">I2</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A] p-[19px]"
+                                                    data-price="550">I3</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A] p-[19px]"
+                                                    data-price="550">I4</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4 mt-6">
+                                    <div class="">
+                                        J
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="grid grid-cols-4 lg:gap-4">
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A] p-[18px]"
+                                                    data-price="550">J1</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A] p-[18px]"
+                                                    data-price="550">JH</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] lg:ml-8 bg-[#0307121A] p-[18px]"
+                                                    data-price="550">J3</button>
+                                            </div>
+                                            <div class=""><button
+                                                    class="allSeat btn btn-outline btn-success lg:w-[80%] bg-[#0307121A] p-[18px]"
+                                                    data-price="550">J4</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                         <!-- ticket info -->
                         <div class="grid flex-grow lg:p-8">
@@ -492,34 +545,31 @@
                             <div class=" font-inter bg-[#F7F8F8] p-3 lg:p-8 rounded-xl mt-6">
                                 <ul class="mt-6 space-y-2 font-medium ">
                                     <li class="text-black border-b border-dashed border-gray-300 p-2">
-                                        <p>Seat <span
+                                        <p>Seat <span id="seat-booked"
                                                 class="bg-[#1DD100] text-white p-1 rounded-md font-bold text-xs ">0</span>
                                         </p>
                                         <p>Class</p>
                                         <p>Price</p>
                                     </li>
-                                    <li>
-                                        <p>C1</p>
-                                        <p>C1</p>
-                                        <p>C1</p>
-                                    </li>
+                                    <div id="seat-data">
+                                    </div>
                                 </ul>
                                 <div class="flex justify-between border-t-2 py-4 font-semibold">
                                     <p>Total Price</p>
-                                    <p>BDT <span>0</span></p>
+                                    <p>BDT <span id="total-price">0</span></p>
                                 </div>
-                                <div id="discount">
+                                <div id="discount" class="flex justify-between border-t-2 py-4 font-semibold">
 
                                 </div>
-                                <div class="w-full flex join bg-white p-2">
-                                    <input type="text" placeholder="Type here"
+                                <div id="vanish" class="w-full flex join bg-white p-2">
+                                    <input id="couponField" type="text" placeholder="Have any coupon?"
                                         class="input w-[90%] join-item  outline-none" />
-                                    <button
+                                    <button id="applyBtn"
                                         class="btn bg-[#1DD100] text-white join-item flex-1 font-semibold">Apply</button>
                                 </div>
                                 <div class="flex justify-between py-4 font-semibold">
                                     <p>Grand Total</p>
-                                    <p>BDT <span>0</span></p>
+                                    <p>BDT <span id="grand-total">0</span></p>
                                 </div>
                                 <div class=" space-y-2 lg:space-y-5">
                                     <p class="font-semibold">Passenger Name*</p>
@@ -528,15 +578,31 @@
                                     </label>
                                     <p class="font-semibold">Phone Number*</p>
                                     <label class="input input-bordered flex items-center gap-2">
-                                        <input type="number" class="grow" placeholder="Enter your phone number" />
+                                        <input id="inputPhone" type="number" onchange="conditionCheak()" required pattern="[0-9]{11}" class="grow"
+                                            placeholder="Enter your phone number" />
                                     </label>
                                     <p class="font-semibold">Email ID</p>
                                     <label class="input input-bordered flex items-center gap-2">
                                         <input type="text" class="grow" placeholder="Enter your email id" />
                                     </label>
-                                    <div class="flex">
-                                        <button
-                                            class="btn bg-[#1DD100] text-white text-xl font-raleway font-extrabold flex-1">Next</button>
+                                    <div id="modal" class="flex disable">
+                                        <button class="btn bg-[#1DD100] text-white text-xl font-raleway flex-1" onclick="my_modal_5.showModal()">Next</button>
+                                        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                                            <div class="modal-box my-11">
+                                                <div class="flex justify-center items-center py-9">
+                                                    <img src="images/success.png" alt="">
+                                                </div>
+                                                <h2 class="font-bold text-2xl font-inter text-[#27AE60] text-center pb-9">SUCCESS</h2>
+                                                <h3 class="font-bold text-lg text-center">Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you.</h3>
+                                                <p class="py-4 text-center">Shortly you will find a confirmation in your email.</p>
+                                                <div class="modal-action flex justify-center items-center">
+                                                    <form method="dialog">
+                                                        <!-- if there is a button in form, it will close the modal -->
+                                                        <button id="modalBtn" class="btn px-24 bg-[#27AE60] text-white font-sans text-xl font-bold rounded-3xl">Continue</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </dialog>
                                     </div>
                                 </div>
                             </div>
@@ -547,8 +613,33 @@
             </div>
         </section>
     </main>
-    <footer>
 
+    <footer class="footer p-6 lg:p-10 bg-neutral text-neutral-content mt-6 lg:mt-28">
+        <aside>
+            <h3 class="font-raleway font-extrabold text-4xl">P-Ticket</h3>
+            <p>P-Ticket is a digital platform to make your<br>daily commuting better.</p>
+        </aside>
+        <nav>
+            <h6 class="footer-title text-white">Download your app</h6>
+            <div class="flex items-center border-2 p-1 rounded-xl">
+                <div><img src="images/playstore.png" alt=""></div>
+                <div>
+                    <p class="text-white text-lg font-semibold">GET IT ON</p>
+                    <h2 class="text-white font-semibold  text-3xl">Google Play</h2>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <hr class="">
+    <footer class="footer items-center p-2 lg:p-10 bg-neutral text-neutral-content">
+        <aside class="items-center grid-flow-col">
+            <p>@all rights reserved, P-Ticket services limited.2024</p>
+        </aside>
+        <nav class="grid-flow-col lg:gap-4 md:place-self-center md:justify-self-end">
+            <a>Terms & condition</a>
+            <a>Return & refund policy </a>
+            <a>Privacy policy</a>
+        </nav>
     </footer>
 
 
