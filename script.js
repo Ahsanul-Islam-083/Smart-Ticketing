@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 let selectedSeats = [];
 const allSeats = document.getElementsByClassName("allSeat");
-// console.log(allSeats );
+
 let seatVariant = "Economoy";
 let seatBooked = 0;
 let seatLeft = 40;
@@ -18,7 +18,7 @@ for (const seat of allSeats) {
     seat.addEventListener('click', function (e) {
         if (!selectedSeats.includes(this)) {
             selectedSeats.push(this);
-            // console.log(this);
+
             displayBookedseat()
             this.setAttribute("disabled", "");
             this.style.color = "white";
@@ -28,91 +28,42 @@ for (const seat of allSeats) {
         }
 
 
-        // const tSeats = document.querySelectorAll('.allSeat');
-        // const arrayA = [...tSeats];
-        // const arrayB = [...selectedSeats];
-        // // console.log(tSeats);
-        // const resultArray = arrayA.filter(elementA => !arrayB.includes(elementA));
-        // console.log(typeof (resultArray.length));
-        // if (resultArray.length === 36) {
-        //     arrayA.forEach(elementA => {
-        //         if (!resultArray.includes(elementA)) {
-        //             elementA.setAttribute("disabled", "");
-        //         }
-        //     });
-        // }
-
 
         if (selectedSeats.length >= 4) {
             const goId = document.getElementById('go');
             goId.style.pointerEvents = 'none';
-            alert('You have reached your buying limit & congratulation you can apply coupon code!')
+
         }
 
 
-        //     else if(selectedSeats.length > 4){
-        //     selectedSeats.setAttribute("disabled", ""); 
-        // }
-        // const seatName = this.innerText;
 
-        // const selectedUl = document.getElementById('seat-data');
-        // const li = document.createElement('li')
-        // const p = document.createElement('p')
-        // p.innerText = seatName;
-        // const p2 = document.createElement('p')
-        // p2.innerText = seatVariant;
-        // const p3 = document.createElement('p')
-        // p3.innerText = price;
-
-
-
-
-        const modalButton =document.getElementById('modalBtn');
-        modalButton.addEventListener('click', function () {
-            // selectedSeats=[];
-            // document.getElementById('seat-data').innerText = "";
-            // document.getElementById('total-price').innerText = "";
-            // document.getElementById('grand-total').innerText = '';
-            window.location.reload();
-            console.log(modalButton);
-        })
-
-
-
-
-        // li.appendChild(p);
-        // li.appendChild(p2);
-        // li.appendChild(p3);
-        // selectedUl.appendChild(li);
-        seatBooked++;
-        setInnerText('seat-booked', seatBooked);
-        seatLeft--;
-        setInnerText('seat-left', seatLeft);
-
-        // totalPrice('total-price',price);
-
-        // grandTotalPrice('grand-total',price)
-    })
-    function conditionCheak() {
-        // const inputPhone = document.getElementById('inputPhone').value.length;
+        const inputPhone = document.getElementById('inputPhone').value.length;
         const modal = document.getElementById('modal');
         if (selectedSeats.length > 0) {
             modal.classList.remove('disable');
         }
 
 
-    }
+        seatBooked++;
+        setInnerText('seat-booked', seatBooked);
+        seatLeft--;
+        setInnerText('seat-left', seatLeft);
+
+    })
+
+
 
 }
-
-
-
+const modalButton = document.getElementById('modalBtn');
+modalButton.addEventListener('click', function () {
+    window.location.reload();
+})
 function displayBookedseat() {
     let selectedUl = document.getElementById('seat-data');
     selectedUl.innerHTML = '';
     let totalPrice = parseInt(document.getElementById('total-price').innerText);
     let grandTotalPrice = parseInt(document.getElementById('grand-total').innerText);
-    // console.log(totalPrice);
+
     selectedSeats.forEach(seat => {
 
         const ticketPrice = parseInt(seat.dataset.price || 0);
@@ -132,35 +83,9 @@ function displayBookedseat() {
         li.appendChild(p2);
         li.appendChild(p3);
         selectedUl.appendChild(li);
-
-        // function setInnerText(id, value) {
-        //     document.getElementById(id).innerText = value;
-        // }
-
-
-
-        // seatBooked++;
-        // setInnerText('seat-booked', seatBooked);
-        // seatLeft--;
-        // setInnerText('seat-left', seatLeft);
     })
 
 }
-
-// function totalPrice(id, value) {
-//     const totalPrice = document.getElementById(id).innerText;
-//     const convertedTotalPrice = parseInt(totalPrice);
-//     sum = convertedTotalPrice + value;
-//     setInnerText(id, sum);
-// }
-// function grandTotalPrice(id, value) {
-//     const totalPrice = document.getElementById(id).innerText;
-//     const convertedTotalPrice = parseInt(totalPrice);
-//     sum = convertedTotalPrice + value;
-//     setInnerText(id, sum);
-// }
-
-
 
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
@@ -202,7 +127,7 @@ applyBtn.addEventListener('click', function () {
             hideDiv.classList.add('hidden')
         }
         else {
-            alert('Invalid code!')
+            alert('Invalid coupon code!')
         }
     }
 
