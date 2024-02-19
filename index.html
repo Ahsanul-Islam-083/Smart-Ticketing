@@ -14,7 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-
+<link rel="shortcut icon" href="images/bus-icon.png" type="image/x-icon">
     <style>
         .font-raleway {
             font-family: "Raleway", sans-serif;
@@ -30,11 +30,13 @@
             color: #03071299;
             padding: 8px;
         }
+
         .clicked {
             background-color: #1DD100;
             color: white;
         }
-        .disable{
+
+        .disable {
             pointer-events: none;
         }
     </style>
@@ -84,8 +86,11 @@
                 class="w-full h-[80vh] bg-center bg-no-repeat bg-cover bg-[url(images/banner.png)] font-raleway rounded-lg lg:rounded-[32px]">
                 <div class="min-h-full flex flex-col items-center justify-center gap-2 lg:gap-6">
                     <h1 class="text-4xl lg:text-6xl text-white font-extrabold text-center">End-to-End Travel with</h1>
-                    <h1 class="text-4xl lg:text-6xl text-[#1DD100] font-extrabold text-center">Voyage Paribahan Express</h1>
-                    <p class="max-w-2xl font-inter lg:text-[18px] text-center  text-yellow-50">Discover the world with Voyage Paribahan Express, where luxury meets adventure. Our top-notch tour bus takes you on a journey of comfort and exploration.</p>
+                    <h1 class="text-4xl lg:text-6xl text-[#1DD100] font-extrabold text-center">Voyage Paribahan Express
+                    </h1>
+                    <p class="max-w-2xl font-inter lg:text-[18px] text-center  text-yellow-50">Discover the world with
+                        Voyage Paribahan Express, where luxury meets adventure. Our top-notch tour bus takes you on a
+                        journey of comfort and exploration.</p>
                     <div>
                         <a href="#tickets" id="scrollBtn" class="btn bg-[#1DD100] border-none">Buy Tickets</a>
                     </div>
@@ -183,7 +188,8 @@
             <div class="container mx-auto py-11">
                 <div class="max-w-2xl mx-auto">
                     <h2 class="text-center font-bold text-[27px] lg:text-[40px] mb-5">Voyage Paribahan Express</h2>
-                    <p class="font-inter lg:text-[18px] text-center">From cityscapes to natural wonders, every moment is crafted for unforgettable experiences. Come aboard and let us redefine your travel story.</p>
+                    <p class="font-inter lg:text-[18px] text-center">From cityscapes to natural wonders, every moment is
+                        crafted for unforgettable experiences. Come aboard and let us redefine your travel story.</p>
                 </div>
                 <!-- Greenline Paribahan info container -->
                 <div>
@@ -575,27 +581,34 @@
                                     </label>
                                     <p class="font-semibold">Phone Number*</p>
                                     <label class="input input-bordered flex items-center gap-2">
-                                        <input id="inputPhone" type="number" onchange="conditionCheak()" required pattern="[0-9]{11}" class="grow"
-                                            placeholder="Enter your phone number" />
+                                        <input id="inputPhone" type="number" onchange="conditionCheak()" required
+                                            pattern="[0-9]{11}" class="grow" placeholder="Enter your phone number" />
                                     </label>
                                     <p class="font-semibold">Email ID</p>
                                     <label class="input input-bordered flex items-center gap-2">
                                         <input type="text" class="grow" placeholder="Enter your email id" />
                                     </label>
                                     <div id="modal" class="flex disable">
-                                        <button class="btn bg-[#1DD100] text-white text-xl font-raleway flex-1" onclick="my_modal_5.showModal()">Next</button>
+                                        <button class="btn bg-[#1DD100] text-white text-xl font-raleway flex-1"
+                                            onclick="my_modal_5.showModal()">Next</button>
                                         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                                             <div class="modal-box my-11">
                                                 <div class="flex justify-center items-center py-9">
                                                     <img src="images/success.png" alt="">
                                                 </div>
-                                                <h2 class="font-bold text-2xl font-inter text-[#27AE60] text-center pb-9">SUCCESS</h2>
-                                                <h3 class="font-bold text-lg text-center">Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you.</h3>
-                                                <p class="py-4 text-center">Shortly you will find a confirmation in your email.</p>
+                                                <h2
+                                                    class="font-bold text-2xl font-inter text-[#27AE60] text-center pb-9">
+                                                    SUCCESS</h2>
+                                                <h3 class="font-bold text-lg text-center">Thank you for Booking Our Bus
+                                                    Seats. We are working hard to find the best service and deals for
+                                                    you.</h3>
+                                                <p class="py-4 text-center">Shortly you will find a confirmation in your
+                                                    email.</p>
                                                 <div class="modal-action flex justify-center items-center">
                                                     <form method="dialog">
                                                         <!-- if there is a button in form, it will close the modal -->
-                                                        <button id="modalBtn" class="btn px-24 bg-[#27AE60] text-white font-sans text-xl font-bold rounded-3xl">Continue</button>
+                                                        <button id="modalBtn"
+                                                            class="btn px-24 bg-[#27AE60] text-white font-sans text-xl font-bold rounded-3xl">Continue</button>
                                                     </form>
                                                 </div>
                                             </div>
@@ -605,7 +618,7 @@
                                 <div class="flex justify-around text-gray-400 mt-6 font-inter">
                                     <p class="underline">Terms and Conditions</p>
                                     <p class="underline">Cancellation Policy</p>
-                            </div>
+                                </div>
                             </div>
                         </div>
                     </div>
